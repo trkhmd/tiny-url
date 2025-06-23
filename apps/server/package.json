@@ -1,0 +1,33 @@
+{
+	"name": "server",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"db:push": "prisma db push --schema ./prisma/schema",
+		"db:studio": "prisma studio",
+		"db:generate": "prisma generate --schema ./prisma/schema",
+		"db:migrate": "prisma migrate dev"
+	},
+	"dependencies": {
+		"@fastify/cors": "^11.0.1",
+		"@prisma/client": "^6.9.0",
+		"@trpc/client": "^11.0.0",
+		"@trpc/server": "^11.0.0",
+		"better-auth": "^1.2.9",
+		"dotenv": "^16.5.0",
+		"next": "15.3.0"
+	},
+	"trustedDependencies": [
+		"supabase"
+	],
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"prisma": "^6.9.0",
+		"supabase": "^2.26.9",
+		"typescript": "^5"
+	}
+}
